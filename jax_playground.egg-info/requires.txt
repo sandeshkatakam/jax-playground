@@ -1,0 +1,16 @@
+jax
+jaxlib
+equinox
+optax
+numpy
+matplotlib
+
+[dev]
+pytest
+pytest-cov
+black
+ruff
+mypy
+pre-commit
+tox
+hypothesis

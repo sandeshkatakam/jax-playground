@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  jax-playground:
+    build: .
+    container_name: jax-playground
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/workspace
+      - jupyter_cache:/root/.jupyter
+    environment:
+      - JAX_ENABLE_X64=True
+      - JAX_PLATFORM_NAME=cpu
+      - PYTHONUNBUFFERED=1
+    working_dir: /workspace
+    command: jupyter-lab --ip=0.0.0.0 --port=8888 --allow-root
+    # For development with shell access uncomment below
+    # stdin_open: true
+    # tty: true
+    # command: /bin/bash
+
+volumes:
+  jupyter_cache:
+
+# Usage:
+# Build: docker-compose build
+# Run: docker-compose up
+# Access Jupyter: http://localhost:8888
+# Start shell: docker-compose run --rm jax-playground bash

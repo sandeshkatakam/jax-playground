@@ -1,0 +1,7 @@
+LICENSE
+pyproject.toml
+jax_playground.egg-info/PKG-INFO
+jax_playground.egg-info/SOURCES.txt
+jax_playground.egg-info/dependency_links.txt
+jax_playground.egg-info/requires.txt
+jax_playground.egg-info/top_level.txt
